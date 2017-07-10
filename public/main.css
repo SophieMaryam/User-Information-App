@@ -1,0 +1,65 @@
+.index1 {
+	color:white;
+	font-family: 'Roboto';
+	text-align:center;
+	text-transform:uppercase;
+	margin-top:50px;
+}
+
+.thebody {
+	font-family:'Roboto';
+	color:white;
+	text-align:center;
+	background:url("backgroundpattern.png");
+	background-size:cover;
+}
+
+.index2 {
+	color:white;
+
+	font-family: 'Roboto';
+	text-align:center;
+	margin-top:100px;
+}
+
+#img {
+	margin-top:100px;
+	float:center center;
+	
+}
+
+.button {
+	margin-left:15px;
+	width:100px;
+	height:40px;
+	display:inline;
+	font-weight:bold;
+
+}
+
+a:visited{
+	color: white;
+    text-decoration:none;
+}
+
+a:hover {
+	color:#DAA520;
+	text-shadow: 1px 1px 2px white, 0 0 1em #DAA520, 0 0 0.1em white;
+	text-decoration:none;
+}
+
+a:linked{
+	color:white;
+	text-decoration: none;
+
+}
+
+#list {
+	text-decoration:none;
+	list-style-type:none;
+}
+
+#fulllist{
+	margin-left:50px;
+}
+

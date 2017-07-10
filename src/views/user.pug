@@ -1,0 +1,12 @@
+doctype html
+html 
+	head
+		link(rel="stylesheet", href="main.css", type="text/css")
+		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+	body.thebody
+		h1#fulllist Full List of Users
+		ul
+			each user in users
+				li#list=user.firstname + " " + user.lastname + "'s email is " + user.email
+
+
