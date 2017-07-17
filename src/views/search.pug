@@ -3,14 +3,30 @@ html
 	head
 		link(rel="stylesheet", href="main.css", type="text/css")
 		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
 	body.thebody
 		br
 		form(name="form", method="post", action="/searchfound")
-			label(for="search") Search our users 
+			label#title(for="search") Search our users 
 			br
 			br
-			input(name="name", type="text", placeholder="Users i.e. Harry Potter")
+			input(name="name", id="searchengine", type="text", placeholder="Users i.e. Harry Potter")
 
 			input(type="submit", value="Search!") 
+		br 
+		br
+
+		a(href="./")
+			button.buttontwo(type=button) Homepage
+		a(href="./users")
+			button.buttontwo(type=button) Check all our users
+		a(href="./formpage")
+			button.buttontwo(type=button) Add your name 
+
+		script.
+				$(document).ready(function(){
+				$("")
+
+				})
 
 

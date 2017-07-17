@@ -1,11 +1,4 @@
-.index1 {
-	color:white;
-	font-family: 'Roboto';
-	text-align:center;
-	text-transform:uppercase;
-	margin-top:50px;
-}
-
+/*everything*/
 .thebody {
 	font-family:'Roboto';
 	color:white;
@@ -14,9 +7,19 @@
 	background-size:cover;
 }
 
+/*index*/
+.index1 {
+	color:white;
+	font-family: 'Roboto';
+	text-align:center;
+	text-transform:uppercase;
+	margin-top:50px;
+}
+
+
+
 .index2 {
 	color:white;
-
 	font-family: 'Roboto';
 	text-align:center;
 	margin-top:100px;
@@ -63,3 +66,21 @@ a:linked{
 	margin-left:50px;
 }
 
+/*search page*/
+
+#title {
+	color:white;
+	font-family: 'Roboto';
+	text-align:center;
+	text-transform:uppercase;
+	margin-top:50px;
+}
+
+.buttontwo {
+	margin-left:15px;
+	width:100px;
+	height:40px;
+	display:inline;
+	font-weight:bold;
+
+}

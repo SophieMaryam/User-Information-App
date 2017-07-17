@@ -2,16 +2,17 @@ const express = require('express');
 //installing/loading express/which is a module
 
 const app = express();
-// you are calling on express to run 
+// you are calling on express to run it
 
 const fs = require('fs');
 // requiring fs
-// const because its a constant throughout the whole page 
-	
+// you use the word const because its a constant throughout the whole page 
+// const is just interchangeable with var when its constant	
 
 
 const bodyParser = require("body-parser");
 // require is a module loader 
+// bodyParser is a 
 
 app.set('views', __dirname + '/views');
 	// first parameter is what we are setting
@@ -24,7 +25,7 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + "/../public"));
 // The files are all in different folders so all of this is needed to access it
 
-app.use('/', bodyParser.urlencoded({extended: false}));
+app.use('/', bodyParser.urlencoded({extended: true}));
 // it takes info from a form and makes it readable (bodyParser.urlencoded)
 
 app.get('/', function (req, res) {
@@ -67,7 +68,7 @@ app.get('/search', function (req, res) {
 
 // rendering a search page which displays whether you found the user or not
 app.post('/searchresult', function(req, res){
-	console.log(req.body);
+	console.log(req.body); //this will produce the name you typed in the search engine in the console
 	
 	fs.readFile(__dirname + "/../resources/users.json", "utf8", function(err, data){
 
@@ -90,6 +91,8 @@ app.post('/searchresult', function(req, res){
 			console.log(result);
 			res.render('searchfound', {info:result})
 	});
+
+	// you have two pages because you can't have a post and get request ont he same page
 	
 });	
 
@@ -140,7 +143,7 @@ app.post('/formpageinfo', function(req, res){
 
 var server = app.listen(3000, function(req, res){
 	console.log('Example app listening on port: ' + server.address().port);
-	// console.log(__dirname);
+	// console.log(__dirname); // this will show you which folder your app.js is within 
 });
 
 //COMMENTS

@@ -3,17 +3,18 @@ html
 	head
 		link(rel="stylesheet", href="main.css", type="text/css")
 		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
 
 	body.thebody
 		h1 Add yourself as a user! 
 		form(name="form", method="post", action="/formpageinfo")
 			label(for="search")
 			p First name:
-			input(name="firstname", type="text" id="formpage", placeholder="Firstname")
+			input(name="firstname", type="text", placeholder="Firstname")
 			p Last name:
-			input(name="lastname", type="text" id="formpage", placeholder="Lastname")
+			input(name="lastname", type="text", placeholder="Lastname")
 			p Email:
-			input(name="email", type="text" id="formpage", placeholder="Email") 
+			input(name="email", type="text", placeholder="Email") 
 			br
 			br
 			input(type="submit", value="Add!") 
