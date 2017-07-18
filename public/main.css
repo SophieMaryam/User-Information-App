@@ -14,6 +14,7 @@
 	text-align:center;
 	text-transform:uppercase;
 	margin-top:50px;
+	font-size:40px;
 }
 
 
@@ -73,7 +74,7 @@ a:linked{
 	font-family: 'Roboto';
 	text-align:center;
 	text-transform:uppercase;
-	margin-top:50px;
+	margin-top:500px;
 }
 
 .buttontwo {
@@ -82,5 +83,12 @@ a:linked{
 	height:40px;
 	display:inline;
 	font-weight:bold;
+	float:center center;
+	cursor: pointer;
+}
 
+/**form page**/
+
+.alloftheform{
+	float:center;
 }

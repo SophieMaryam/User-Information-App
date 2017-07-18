@@ -3,30 +3,46 @@ html
 	head
 		link(rel="stylesheet", href="main.css", type="text/css")
 		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
-		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
 	body.thebody
-		br
-		form(name="form", method="post", action="/searchfound")
-			label#title(for="search") Search our users 
-			br
-			br
-			input(name="name", id="searchengine", type="text", placeholder="Users i.e. Harry Potter")
+		div.alloftheform
+			form(name="form", method="post", action="/searchfound")
+				label#title(for="search") Search our users 
+				br
+				br
+				input(name="name", id="searchengine", type="text", placeholder="Users i.e. Harry Potter")
 
-			input(type="submit", value="Search!") 
-		br 
-		br
+				br
+				br
 
-		a(href="./")
-			button.buttontwo(type=button) Homepage
-		a(href="./users")
-			button.buttontwo(type=button) Check all our users
-		a(href="./formpage")
-			button.buttontwo(type=button) Add your name 
+				input(type="submit", value="Search!") 
 
+				br 
+				br
+
+				div#emptydiv 
+				br
+				br
+
+			a(href="./")
+				button.buttontwo(type=button) Homepage
+			a(href="./users")
+				button.buttontwo(type=button) All Users
+			a(href="./formpage")
+				button.buttontwo(type=button) Add User
+
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
 		script.
 				$(document).ready(function(){
-				$("")
+					$("#searchengine").keyup(function(){
+					var ajaxmatch = {result:$("#searchengine").val()}
+					// if you are trying to access the info inside the input in a jquery page
+					// you create a variable and assign the value to be as the id 
+					$.post("/match", ajaxmatch, function(res){
+						$("#emptydiv").html("Is this who you were looking for: " + res);
+					});
 
-				})
+					});
+
+				});
 
 

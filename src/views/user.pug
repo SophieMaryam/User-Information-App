@@ -9,4 +9,11 @@ html
 			each user in users
 				li#list=user.firstname + " " + user.lastname + "'s email is " + user.email
 
-
+		br 
+		br
+		a(href="./")
+			button.buttontwo(type=button) Homepage
+		a(href="./search")
+			button.buttontwo(type=button) Search
+		a(href="./formpage")
+			button.buttontwo(type=button) Add User

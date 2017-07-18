@@ -55,22 +55,38 @@ app.get('/search', function (req, res) {
 
 //search engine with ajax
 
-$.post("/match", function(req, res){
-	fs.readFile(__dirname + "/../resources/users.json"){
+app.post("/match", function(req, res){
+	fs.readFile(__dirname + "/../resources/users.json", "utf8", function(err,data){
 		if(err){
 			throw err;
 		}
 
 		var obj = JSON.parse(data);
 		console.log(obj);
+		
+		var ajaxmatch = req.body.result;
+		console.log(ajaxmatch);
+
+		var emptyarray = ["Is this who you were looking for: "];
+		var emptystring = "";
 
 		for(var i = 0; i < obj.length; i++){
-			if(req.body.smth === obj[i].length){
-				res.send({smth:obj[i].length})
+			if(ajaxmatch === emptystring){
+				console.log("nothing");
+			// 	if((ajaxmatch === obj[i].firstname) || (ajaxmatch === obj[i].lastname) || (ajaxmatch === obj[i].email)){
+					// this is the same as the line of code below 
+			} else if((obj[i].firstname.includes(ajaxmatch)) || (obj[i].lastname.includes(ajaxmatch)) || (obj[i].email.includes(ajaxmatch))){
+				var thedata = obj[i].firstname + " " + obj[i].lastname;
+				emptyarray.push(thedata);
 			}
-		}
-	}
+		};
+		res.send(emptyarray);
+		console.log(emptyarray);
+	});
 });
+
+
+
 
 
 
@@ -93,13 +109,11 @@ app.post('/searchfound', function(req, res){
 		for(var i = 0; i < obj.length; i++) {
 			if((req.body.name === obj[i].firstname) || (req.body.name === obj[i].lastname)) { 
 				var result = obj[i].firstname + ' ' + obj[i].lastname + "'s email is " + obj[i].email;
-			}
-			 
+			} 
 		}
 			console.log(result);
 			res.render('searchfound', {info:result});
 	});	
-
 });
 
 // 	rendering a form page 

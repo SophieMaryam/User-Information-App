@@ -4,15 +4,20 @@ html
 		link(rel="stylesheet", href="./main.css", type="text/css")
 		link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
 	body.thebody
-		h1.index1 Welcome to our Page!
+		h1.index1 Welcome
 		h2.index2 Do you want to search for someone? 
 		h2.index2 Do you want to add your name to our user list? Try it out!
-		a(href="./formpage")
-			button.button(type=button) Add your name
-		a(href="./users")
-			button.button(type=button) Check all our users
-		a(href="./search")
-			button.button(type=button) Search for users 
 		br
+		br
+		a(href="./search")
+			button.buttontwo(type=button) Search
+		a(href="./users")
+			button.buttontwo(type=button) All Users
+		a(href="./formpage")
+			button.buttontwo(type=button) Add User
+		
+		br
+		br
+		
 		iframe#img(src="https://giphy.com/embed/X33wdAkkvx1LO", width="480", height="272", frameBorder="0", class="giphy-embed", allowFullScreen)
 
