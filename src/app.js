@@ -62,12 +62,12 @@ app.post("/match", function(req, res){
 		}
 
 		var obj = JSON.parse(data);
-		console.log(obj);
+		// console.log(obj);
 		
 		var ajaxmatch = req.body.result;
-		console.log(ajaxmatch);
+		// console.log(ajaxmatch);
 
-		var emptyarray = ["Is this who you were looking for: "];
+		var emptyarray = [];
 		var emptystring = "";
 
 		for(var i = 0; i < obj.length; i++){
@@ -81,7 +81,7 @@ app.post("/match", function(req, res){
 			}
 		};
 		res.send(emptyarray);
-		console.log(emptyarray);
+		// console.log(emptyarray);
 	});
 });
 

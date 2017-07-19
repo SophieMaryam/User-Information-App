@@ -34,15 +34,17 @@ html
 		script.
 				$(document).ready(function(){
 					$("#searchengine").keyup(function(){
-					var ajaxmatch = {result:$("#searchengine").val()}
-					// if you are trying to access the info inside the input in a jquery page
-					// you create a variable and assign the value to be as the id 
-					$.post("/match", ajaxmatch, function(res){
-						$("#emptydiv").html("Is this who you were looking for: " + res);
-					});
+						var ajaxmatch = {result:$("#searchengine").val()}
+							// if you are trying to access the info inside the input in a jquery page
+							// you create a variable and assign the value to be as the id 
+						function addMatch(){
+							$.post("/match", ajaxmatch, function(res){
+								$("#emptydiv").html("Is this who you were looking for: " + res);
+							});
+						}
 
-					});
 
+					}); 	
 				});
 
 
