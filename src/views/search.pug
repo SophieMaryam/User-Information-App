@@ -36,13 +36,17 @@ html
 					$("#searchengine").keyup(function(){
 						var ajaxmatch = {result:$("#searchengine").val()}
 							// if you are trying to access the info inside the input in a jquery page
-							// you create a variable and assign the value to be as the id  
+							// you create a variable and assign the value to be as the id 
+						function addMatch(){
 							$.post("/match", ajaxmatch, function(res){
 								$("#emptydiv").html("Is this who you were looking for: " + 	res);
+								for(var i = 0; i < res.length; i++){
+
+								$("#emptydiv").append('<li>' + res[i]+ '</li>');
+								};
 							});
+						}
+						setTimeout(addMatch, 3000);
 
 					}); 	
 				});
-
-
-
