@@ -72,7 +72,7 @@ app.post("/match", function(req, res){
 
 		for(var i = 0; i < obj.length; i++){
 			if(ajaxmatch === emptystring){
-				console.log("nothing");
+				// console.log("nothing");
 			// 	if((ajaxmatch === obj[i].firstname) || (ajaxmatch === obj[i].lastname) || (ajaxmatch === obj[i].email)){
 					// this is the same as the line of code below 
 			} else if((obj[i].firstname.includes(ajaxmatch)) || (obj[i].lastname.includes(ajaxmatch)) || (obj[i].email.includes(ajaxmatch))){
